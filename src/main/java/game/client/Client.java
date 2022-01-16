@@ -1,6 +1,7 @@
 package game.client;
 
 import model.entities.Player;
+import java.util.Scanner;
 
 public class Client {
     private static Player player;
@@ -11,6 +12,20 @@ public class Client {
         initialize();
 
         System.out.println(player.getStats());
+
+        // 1. Looking For Trouble 2. Exit
+
+        System.out.println("What do you want to do?" +
+                "\n 1 = Looking For Trouble \n 2 = Exit Game");
+
+        Scanner scanner = new Scanner(System.in);
+        String in = scanner.nextLine();
+
+        if (in.equals("1")){
+            System.out.println("Trouble");
+        }
+
+        scanner.close();
 
     }
 
